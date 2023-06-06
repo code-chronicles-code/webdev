@@ -1,7 +1,7 @@
 # webdev
 
 ## Main Quest: Hello World in Express
-First thing first we'd like to install a couple of tools that we'll be using in our journey. To get started we'll need `nvm`,   `node`, and `yarn`. `nvm` is not nevermind. nvm is a node version manager to manage your node version. `node` is a program that will let us run a server on our computer. `yarn` is a package manager to help us manage javascript packages. 
+First thing first we'd like to install a couple of tools that we'll be using in our journey. To get started we'll need `nvm`, `node`, and `yarn`. `nvm` is not nevermind. nvm is a node version manager to manage your node version. `node` is a program that will let us run a server on our computer. `yarn` is a package manager to help us manage javascript packages. 
 
 You could install nvm via cURL with the following command:
 ```sh
