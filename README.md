@@ -203,6 +203,7 @@ elif ((current_hour >= 17 && current_hour < 24)) || ((current_hour >= 0 && curre
 fi
 ```
 
+<<<<<<< HEAD
 ## Main Quest: Add name to Authors via pull request.
 
 First, we need to install GitHub CLI with:
@@ -284,3 +285,32 @@ Finally, we run and wait for review.
 ```sh
 git pull
 ```
+=======
+## Main Quest: Moving from a JavaScript file to TypeScript
+
+our first step here is using a package manager(in our case Yarn) to install:
+```
+yarn add typescript
+```
+
+now we're going to rename our .js file to .ts using the following command:
+
+```
+rm program_name.js program_name.ts
+```
+In the program we just renamed above we'll have to replace:
+``` const express = require('express') ``` for ```import express from 'express';```
+
+Lastly we're going to run this sequence of command to finalize the setup:
+```
+yarn add @types/express
+yarn add ts-node
+```
+
+With those steps you should now be able to run your typescript code:
+```yarn ts-node program_name.ts```
+
+   congrats! __+100xp__
+   
+~ To learn more about the import and module lore in typescript refer to https://www.typescriptlang.org/docs/handbook/2/modules.html
+
