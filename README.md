@@ -48,7 +48,11 @@ which yarn
 
 If any installation step failed you'll see `______ not found`. If you don't see that then you're ready to continue on your quest, fellow coder.
 
-The next step would be to add express to your project, which can be done using a simple yarn command `sh yarn add express `
+The next step would be to add express to your project, which can be done using a simple yarn command
+
+```
+yarn add express
+```
 
 If you open your project file in an editor (we at code chronicles like using VS code because it's good), you can see a console.log() statement which you can edit as per your liking.
 
@@ -144,14 +148,12 @@ It's also useful to have a specific npm/yarn script under scripts in `package.js
 
 ## Side Quest: Shell greetings!
 
-
 Are you lonely? Craving companionship? Looking for a relationship with your laptop? Look no further, because you are in the right place.
 
 ~/.zprofile is our startup/shutdown file for the zsh shell.
 There's also a cousin, ~/.zshrc, which is an interactive file read while our shell is running. This config file is written in a scripting language specific to the shell, which in this case is **Zsh**. Feel free to take a look at the ZSH [documentation](https://zsh.sourceforge.io/Doc/Release/Files.html#Files) for more info.
 
 To cd to home directory and open the zprofile file, run:
-
 
 ```
 cd ~ && open .zprofile
