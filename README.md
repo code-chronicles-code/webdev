@@ -70,7 +70,7 @@ Once the package.json file is done with the initial setup, we can now run the ou
 
 To run the project, go into your terminal and type the following command,
 
-```sh
+```
 node main.js
 ```
 
@@ -90,7 +90,7 @@ In your package.json, we will be editing the scripts as follows:
 
 Once this has been added in your package.json, save all the changes and type the following command in your terminal.
 
-```sh
+```
 yarn start
 ```
 
