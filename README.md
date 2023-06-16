@@ -298,7 +298,13 @@ now we're going to rename our .js file to .ts using the following commands:
 mv program_name.js program_name.ts
 ```
 In the program we just renamed above we'll have to replace:
-``` const express = require('express') ``` for ```import express from 'express';```
+``` 
+const express = require('express') 
+``` 
+for 
+``` 
+import express from 'express'; 
+```
 
 Lastly we're going to run this sequence of commands to finalize the setup:
 ```
@@ -307,7 +313,9 @@ yarn add ts-node
 ```
 
 With those steps you should now be able to run your typescript code:
-```yarn ts-node program_name.ts```
+```
+yarn ts-node program_name.ts
+```
 
    congrats! __+100xp__
    
