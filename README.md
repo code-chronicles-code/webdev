@@ -314,3 +314,31 @@ With those steps you should now be able to run your typescript code:
    
 ~ To learn more about the import and module lore in typescript refer to https://www.typescriptlang.org/docs/handbook/2/modules.html
 
+
+## Side Quest: Rebasing
+
+ Rebasing is the process of moving or combining a sequence of commits from one branch to another. It allows you to modify the commit history of a branch, making it appear as if you had made your changes directly on top of the latest commit in another branch.
+
+ Here's a visual example of  rebasing a Your_Branch to main:
+
+       A---B---C  (Your_Branch)
+     /
+D---E---F---G   (main)
+
+
+              A---B---C  (Your_Branch)
+             /
+D---E---F---G  (main)
+
+Assuming you are in Your_Branch, to perform what is ilustrated above execute the following:
+'''git rebase main'''
+
+To check if you should rebase you might want to use the command '''git log''' to view the commit history of your branch. You'll be able to see the latest commit on your branch.
+
+Compare the commit history of your branch with the target branch. If there are new commits on the target branch that you want to incorporate into your work, it's a good indication that you might need to perform a rebase.
+
+Additionally, remember that rebasing modifies the commit history, so if you have already pushed your branch to a remote repository, you will need to force push the rebased branch using the command '''git push -f'''. However, be cautious when force pushing, as it can cause issues if others are also working on the same branch.
+
+
+
+
