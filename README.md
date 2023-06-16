@@ -293,15 +293,15 @@ our first step here is using a package manager(in our case Yarn) to install:
 yarn add typescript
 ```
 
-now we're going to rename our .js file to .ts using the following command:
+now we're going to rename our .js file to .ts using the following commands:
 
 ```
-rm program_name.js program_name.ts
+mv program_name.js program_name.ts
 ```
 In the program we just renamed above we'll have to replace:
 ``` const express = require('express') ``` for ```import express from 'express';```
 
-Lastly we're going to run this sequence of command to finalize the setup:
+Lastly we're going to run this sequence of commands to finalize the setup:
 ```
 yarn add @types/express
 yarn add ts-node
