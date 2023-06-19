@@ -284,3 +284,13 @@ Finally, we run and wait for review.
 ```sh
 git pull
 ```
+
+
+## TLDR
+
+- add webpack
+- create a webpack.config.js file
+- edit the webpack config file
+- set the location of the packages in webpack config file
+- make a build script in the package.json
+- run it with yarn
