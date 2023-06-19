@@ -290,7 +290,7 @@ git pull
 
 - add webpack
 - create a webpack.config.js file
-- edit the webpack config file
+- edit the webpack config file to match how your project is organized
 - set the location of the packages in webpack config file
 - make a build script in the package.json
 - run it with yarn
