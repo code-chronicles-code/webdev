@@ -284,7 +284,7 @@ Finally, we run and wait for review.
 ```
 git pull
 ```
-=======
+
 ## Main Quest: Moving from a JavaScript file to TypeScript
 
 our first step here is using a package manager(in our case Yarn) to install:
