@@ -36,6 +36,10 @@ These problems or their problem tag might look or say that it's not an "easy" pr
 
 12. https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/ (With only using nums[j] < nums[i] as the condition)
 
+13. https://leetcode.com/problems/running-sum-of-1d-array/
+
+14. https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/
+
 ## Difficulty Level : Medium
 
 1. https://leetcode.com/problems/add-two-numbers/
@@ -43,5 +47,11 @@ These problems or their problem tag might look or say that it's not an "easy" pr
 2. https://leetcode.com/problems/majority-element/ (With Boyer-Moore Majority Voting Algorithm)
 
 3. https://leetcode.com/problems/daily-temperatures/
+
+4. https://leetcode.com/problems/strictly-palindromic-number/
+
+5. https://leetcode.com/problems/left-and-right-sum-differences/
+
+6. https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/
 
 The above will list will be updated every week.
