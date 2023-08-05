@@ -22,25 +22,25 @@ First thing first we'd like to install a couple of tools that we'll be using in 
 
 You could install nvm via cURL with the following command:
 
-```sh
+```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 ```
 
 Now that we have nvm installed, we can install node with the following command:
 
-```sh
+```
 nvm install node
 ```
 
 Now that we have node installed, we can install yarn with the following command:
 
-```sh
+```
 corepack enable
 ```
 
 You could double check you've installed all of the above successfully by running:
 
-```sh
+```
 which nvm
 which node
 which yarn
@@ -106,13 +106,13 @@ This might look like an extra step now but once we start adding & building more 
 
 To install prettier, run:
 
-```sh
+```
 yarn add --dev --exact prettier
 ```
 
 Prettier should have a configuration file, for example `.prettierrc.json`. It can be created by running:
 
-```sh
+```
 echo {} > .prettierrc.json
 ```
 
@@ -131,7 +131,7 @@ Create a `.prettierignore` file in the root of your project to indicate which fi
 
 To make `.prettierignore` match `.gitignore` content, run:
 
-```sh
+```
 cp .gitignore .prettierignore
 ```
 
@@ -207,81 +207,81 @@ fi
 
 First, we need to install GitHub CLI with:
 
-```sh
+```
 apt-get install gh
 sudo apt-get install gh
 ```
 
 Next, we need to authenticate with:
 
-```sh
+```
 gh auth login
 ```
 
 After authenticating and selecting project to work on with :
 
-```sh
+```
 gh repo clone code-chronicles-code/webdev
 ```
 
 We need to make a new branch with the command
 
-```sh
+```
 git branch name/add-to-author
 ```
 
 This will add a new branch and we can switch to the new branch with command
 
-```sh
+```
 git checkout name/add-to-author
 ```
 
 Before committing to changes we need to add signatures for changes with commands:
 
-```sh
+```
 git config --global user.name
 git config --global user.email
 ```
 
 Now we can edit with and enter name in alphabetical order:
 
-```sh
+```
 code AUTHORS
 ```
 
 We need to do
 
-```sh
+```
 git add .
 ```
 
 We commit file with command
 
-```sh
+```
 git commit
 ```
 
 Next we execute the command:
 
-```sh
+```
 gh pr create
 ```
 
 Now we switch to the main branch
 
-```sh
+```
 git checkout main
 ```
 
 Delete old branch
 
-```sh
+```
 git branch -D name/add-to-author
 ```
 
 Finally, we run and wait for review.
 
-```sh
+```
 git pull
 ```
 
@@ -360,3 +360,69 @@ Making a script would be helpful for running the all the commands together and w
 ### Run it all!
 
 To run in all just say `yarn start-full` in your terminal. Once you do check your local host, now any changes that you make to your client side code you can see those changes being updated as soon as you reload the browser.
+=======
+## Main Quest: Moving from a JavaScript file to TypeScript
+
+our first step here is using a package manager(in our case Yarn) to install:
+```
+yarn add typescript
+```
+
+now we're going to rename our .js file to .ts using the following commands:
+
+```
+mv program_name.js program_name.ts
+```
+In the program we just renamed above we'll have to replace:
+``` 
+const express = require('express') 
+``` 
+for 
+``` 
+import express from 'express'; 
+```
+
+Lastly we're going to run this sequence of commands to finalize the setup:
+```
+yarn add @types/express  \# This command adds the TypeScript definitions for Express. These allow you to write Express code with TypeScript, providing types and autocompletion.
+yarn add ts-node         \# This command adds the ts-node package. ts-node is a TypeScript execution and REPL for node.js, with source map support. It's used to execute TypeScript code directly, without the need for a prior separate compilation step.
+```
+
+With those steps you should now be able to run your typescript code:
+```
+yarn ts-node program_name.ts
+```
+
+   congrats! __+100xp__
+   
+~ To learn more about the import and module lore in typescript refer to https://www.typescriptlang.org/docs/handbook/2/modules.html
+
+
+## Side Quest: Rebasing
+
+ Rebasing is the process of moving or combining a sequence of commits from one branch to another. It allows you to modify the commit history of a branch, making it appear as if you had made your changes directly on top of the latest commit in another branch.
+
+ Here's a visual example of  rebasing a Your_Branch to main:
+```
+       A---B---C  (Your_Branch)
+     /
+D---E---F---G   (main)
+
+
+              A---B---C  (Your_Branch)
+             /
+D---E---F---G  (main)
+```
+Assuming you are in Your_Branch, to perform what is ilustrated above execute the following:
+'''git rebase main'''
+
+To check if you should rebase you might want to use the command '''git log''' to view the commit history of your branch. You'll be able to see the latest commit on your branch.
+
+Compare the commit history of your branch with the target branch. If there are new commits on the target branch that you want to incorporate into your work, it's a good indication that you might need to perform a rebase.
+
+Additionally, remember that rebasing modifies the commit history, so if you have already pushed your branch to a remote repository, you will need to force push the rebased branch using the command '''git push -f'''. However, be cautious when force pushing, as it can cause issues if others are also working on the same branch.
+
+  bonus __+50xp__ and new skill acquired: __Forcefull Surge__(AoE spell) - Unleash the power of the -f flag to aggressively rewrite history, leaving a trail of chaos in your wake.
+
+
+
